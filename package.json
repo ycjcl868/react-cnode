@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
-    "dist": "webpack --progress --colors -p"
+    "dist": "webpack --progress --colors -p",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,8 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.3.0",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
@@ -48,5 +51,6 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.0",
     "webpack-dev-server": "1.14.1"
-  }
+  },
+  "snyk": true
 }
